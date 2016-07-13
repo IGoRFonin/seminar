@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery list</title>
+</head>
+<body>
+	<style>
+		#news {
+			font-size: 40px;
+		}
+	</style>
+	<div id="news">
+		<li>Новость дня</li>
+		<li class="dotted">Новость дня</li>
+		<li>Новость дня</li>
+		<li class="dotted">Новость дня</li>
+		<li>Новость дня</li>
+		<li class="dotted">Новость дня</li>
+		<li>Новость дня</li>
+		<li class="dotted">Новость дня</li>
+		<li>Новость дня</li>
+		<li class="dotted">Новость дня</li>
+	</div>
+
+<script src="js/jquery.min.js"></script>
+<script>
+	$(function() {
+		$('#news li').each(function(index, element) {
+			if($(this).hasClass('dotted')) {
+				$(this).css('color', 'red');
+				$(this).on('click', function() {
+					console.log('я красный ' + index);
+				})
+			}
+			else {
+				$(this).on('click', function() {
+					console.log('я черный, за Империю ' + index);
+				});
+			}
+		})
+	});
+</script>
+</body>
+</html>

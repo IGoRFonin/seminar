@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<style>
+	body {
+		background-color: #e6cfad;
+	}
+	.box {
+		display: block;
+		width: 800px;
+		height: 600px;
+		padding: 30px 50px;
+		background-color: #fff;
+		box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+		border:1px solid rgba(0, 0, 0, .3);
+		border-radius: 20px;
+		text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+		font-family: Arial, sans-serif;
+		font-size: 40px;
+		color: rgb(49, 46, 46);
+	}
+	.center {
+	    text-align: center;
+		
+	}
+	.top {
+		margin-top: 250px;   
+	}
+	.jquery {
+		color:#589fb9 ;
+		font-size: 46px;
+	}
+	.jq-s {
+		color:#589fb9
+	}
+	.selector {
+		    color: #d84444;
+	}
+	.function {
+		 color: #bc84d8;
+	}
+	.code {
+	    color: #5f7ce8;
+	}
+	.event {
+		color:orange;
+	}
+	.this {
+		color:#50b945;;
+	}
+</style>
+
+<div id="impress">
+	<div class="step box" data-x="0" data-Y="0" data-rotate="90">
+		<div class="center top">Welcome, <span class="jquery">jQuery</span></div>
+	</div>
+
+	<div class="step box" data-x="0" data-Y="1000">
+		<div class="center top">javascript – скриптовый язык, который
+			поддерживают большинство
+			современных браузеров</div>
+	</div>
+
+	<div class="step box" data-x="2000" data-Y="1000" data-z="1000" data-rotate="180">
+		<div style="margin-top:100px;"><span class="jquery">jQuery(jq)</span> – специальная библиотека,
+		написанная на javascript, основное
+		назначение которой заключается в
+		обеспечении правильного
+		взаимодействия между JavaScript и
+		HTML. <br><br>
+		"$" или "jQuery" - даёт понять компилятору, что работа
+		ведётся через библиотеку jquery</div>
+	</div>
+	
+	<div class="step box" data-x="4000" data-Y="2000">
+		<div>Взаимодействия в jQuery основаны на
+			селекторах, функциях и событиях. <br><br>
+
+			<span class="jq-s">$</span>(<span class="selector">селектор</span>).обработчик_события(<span class="function">function</span>(){
+			<br>
+			<span class="code">код_обработчика_события</span>
+			<br>
+			}); 
+		</div>
+	</div>
+
+	<div class="step box" data-x="6000" data-Y="2000" data-rotate="180">
+		<div>
+		<div class="center">Примеры вобора селекторов</div>
+		<br><br>
+		<div>
+			<span class="jq-s">$</span>(<span class="selector">"p"</span>).обработчик... <br>
+			<span class="jq-s">$</span>(<span class="selector">".news"</span>).обработчик... <br>
+			<span class="jq-s">$</span>(<span class="selector">"#list"</span>).обработчик... <br>
+			<span class="jq-s">$</span>(<span class="selector">"#list li"</span>).обработчик... <br>
+			<span class="jq-s">$</span>(<span class="selector">"#list li > a"</span>).обработчик... <br>
+			<span class="jq-s">$</span>(<span class="selector">"[name='PHONE_FIELD']"</span>).обработчик... <br>
+			<span class="jq-s">$</span>(<span class="selector">"[data-id]"</span>).обработчик... <br>
+			<span class="jq-s">$</span>(<span class="selector">"div:first-child"</span>).обработчик... <br>
+		</div>
+		</div>
+	</div>
+
+	<div class="step box" data-x="-6000" data-Y="3000" data-rotate="90">
+		<div>Пример события. <br><br>
+
+			<span class="jq-s">$</span>(<span class="selector">".button"</span>).on( <span class="event">'click'</span>, <span class="function">function</span>(){
+			<br>
+			<div style="margin-left:50px;">
+			<span class="jq-s">$</span>(<span class="this">this</span>).css('color', 'orange');
+			</div>
+			}); 
+		</div>
+	</div>
+
+	<div class="step box" data-x="8000" data-Y="3000" >
+		<div style="line-height: 62px;">Перебор элементов. <br><br>
+
+			<span class="jq-s">$</span>(<span class="selector">".news li"</span>).each(<span class="function">function</span>(index, element){
+			<br>
+			<div style="margin-left:50px;">
+			if(<span class="jq-s">$</span>(<span class="this">this</span>).hasClass('dotted')) { 
+				<div style="margin-left:50px;">
+					<span class="jq-s">$</span>(<span class="this">this</span>).addClass('best-li');
+				</div>
+			}
+			</div>
+
+			
+			}); 
+		</div>
+	</div>
+
+	
+
+
+	<div class="step box" data-x="10000" data-Y="3000" >
+		<div style="line-height: 62px;">Применение плагина. <br><br>
+			<span class="jq-s">$</span>(<span class="selector">".show-fancy"</span>).fancybox();
+			<br>
+			<span class="jq-s">$</span>(<span class="selector">".show-fancy"</span>).on( <span class="event">'click'</span>, <span class="function">function</span>(){
+			<br>
+			<div style="margin-left:50px;">
+				<span class="jq-s">$</span>.fancybox(параметры);
+			</div>
+		
+			});
+		</div>
+	</div>
+
+	<div class="step box" data-x="12000" data-Y="3000" data-rotate="90">
+		<div style="line-height: 62px;">Проверка на готовность документа. <br><br>
+			<span class="jq-s">$</span>(<span class="selector">document</span>).ready({<br>
+				<div class="code">код</div>
+			});
+			<br>
+			сокращенный метод 'document' <br>
+			<span class="jq-s">$</span>(<span class="function">function</span>() {<br>
+				<div class="code">код</div>
+			});
+		</div>
+	</div>
+
+	<div class="step box" data-x="14000" data-Y="3000" data-rotate="90">
+		<div style="line-height: 40px;">Ajax. <br><br>
+			<span class="jq-s">$</span>.ajax({	<br>
+			<div style="margin-left:50px;">
+				url:	'ajax.html',	<br>
+				method:	'post',	<br>
+				data: "phone=Android",	<br>
+				success:	<span class="function">function</span>	(res)	{	<br>
+								<span class="code">...	</span>	<br>
+				},		<br>
+				error:	<span class="function">function</span>	(res)	{	<br>
+								<span class="code">...	</span>	<br>
+				},	<br>
+				</div>
+			});	
+		</div>
+	</div>
+</div>
+<script src="js/impress.js"></script>
+<script>
+// var impress = document.getElementById('impress');
+	impress().init();
+</script>
+</body>
+</html>
